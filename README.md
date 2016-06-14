@@ -16,7 +16,7 @@ Example Usage:
 		
 		var Column 	= new Array();
 		Column[0] 	= new nlobjSearchColumn('internalid').setSort();
-		Column[1]   	= new nlobjSearchColumn('line').setSort();
+		Column[1]	= new nlobjSearchColumn('line').setSort();
 		Column[2] 	= new nlobjSearchColumn('trandate');
 		Column[3] 	= new nlobjSearchColumn('account');
 		Column[4] 	= new nlobjSearchColumn('amount');
