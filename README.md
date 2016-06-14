@@ -12,11 +12,11 @@ Example Usage:
 
 		var Filter	= new Array();
 		Filter[0] 	= new nlobjSearchFilter('trandate', null, 'within', firstDate, lastDate);
-		Filter[1]	  = new nlobjSearchFilter('posting', null, 'is', 'T');
+		Filter[1]	= new nlobjSearchFilter('posting', null, 'is', 'T');
 		
 		var Column 	= new Array();
 		Column[0] 	= new nlobjSearchColumn('internalid').setSort();
-		Column[1]   = new nlobjSearchColumn('line').setSort();
+		Column[1]   	= new nlobjSearchColumn('line').setSort();
 		Column[2] 	= new nlobjSearchColumn('trandate');
 		Column[3] 	= new nlobjSearchColumn('account');
 		Column[4] 	= new nlobjSearchColumn('amount');
