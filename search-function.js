@@ -1,5 +1,5 @@
-// filters **MUST** include internalid
-// filters **MUST** must store by internalid (ex. "new nlobjSearchColumn('internalid').setSort();")
+// filters **MUST** include internalid && line
+// filters **MUST** must stort by internalid && line (ex. "new nlobjSearchColumn('internalid').setSort();")
 function search(filters, columns, searchtype){ 
 
 	var allResults 	= new Array();	// Array for search result storage
