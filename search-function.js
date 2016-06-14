@@ -1,10 +1,10 @@
 // filters **MUST** include internalid && line
 // filters **MUST** must stort by internalid && line (ex. "new nlobjSearchColumn('internalid').setSort();")
-function search(filters, columns, searchtype){ 
+function search(filters, columns, searchtype, scriptid){ 
 
 	var allResults 	= new Array();	// Array for search result storage
 
-	var results = nlapiSearchRecord(searchtype, null, filters, columns); // Search for first 1000 results
+	var results = nlapiSearchRecord(searchtype, scriptid, filters, columns); // Search for first 1000 results
 	allResults 	= allResults.concat(results);	// Store first 1000 results in storage array
 	
 	while(results.length == 1000){ // Search for results greater than 1000
@@ -15,7 +15,7 @@ function search(filters, columns, searchtype){
 		
 		filters[filters.length] = new nlobjSearchFilter('internalidNumber', null, 'greaterthanorequalto', lastId2); // New filter, get results that have an internal ID greater than the last searched
 	
-		var results = nlapiSearchRecord(searchtype, null, filters, columns); // Search for the next 1000 records
+		var results = nlapiSearchRecord(searchtype, scriptid, filters, columns); // Search for the next 1000 records
 		
 		for(var i = 0; i < results.length; i++){
 			
